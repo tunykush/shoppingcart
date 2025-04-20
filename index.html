@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaMod</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">FaMod</a>
+        <a href="cart.html" class="cart-icon">
+            <i class="ri-shopping-cart-line"></i>
+            <span class="cart-items-count"></span>
+        </a>
+    </nav>
+    <div class="filter-buttons" style="padding: 120px 9% 0;">
+        <button onclick="filterByBrand('all')">All</button>
+        <button onclick="filterByBrand('Porsche')">Porsche</button>
+        <button onclick="filterByBrand('Lamborghini')">Lamborghini</button>
+        <button onclick="filterByBrand('Bugatti')">Bugatti</button>
+        <button onclick="filterByBrand('Mazda')">Mazda</button>
+        <button onclick="filterByBrand('McLaren')">McLaren</button>
+        <button onclick="filterByBrand('Audi')">Audi</button>
+        <button onclick="filterByBrand('Bentley')">Bentley</button>
+    </div>
+    
+    
+    <section class="product_collection">
+        <h1>Mini GT</h1>
+        <div class="product-list"></div>
+    </section>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
