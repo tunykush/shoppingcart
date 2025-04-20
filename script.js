@@ -37,10 +37,17 @@ function displayProducts(productArray = products) {
         productContainer.appendChild(productCard);
 
         const imgBox = productCard.querySelector(".img-box");
-        imgBox.addEventListener("click", () => {
-            sessionStorage.setItem("selectedProduct", JSON.stringify(product));
-            window.location.href = "product-detail.html";
-        });
+imgBox.addEventListener("click", () => {
+    sessionStorage.setItem("selectedProduct", JSON.stringify(product));
+
+    // Thêm class hiệu ứng
+    document.body.classList.add("fade-out");
+
+    // Chờ hiệu ứng kết thúc rồi mới chuyển trang
+    setTimeout(() => {
+        window.location.href = "product-detail.html";
+    }, 500); // đúng 0.5s như CSS animation
+});
     });
 }
 
