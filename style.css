@@ -369,3 +369,14 @@ body.fade-in {
         opacity: 1;
     }
 }
+
+.main-img img {
+    opacity: 0;
+    animation: fadeInMain 0.4s ease forwards;
+}
+
+@keyframes fadeInMain {
+    to {
+        opacity: 1;
+    }
+}

@@ -83,7 +83,14 @@ function displayProductDetail(){
             thumbnailContainer.appendChild(img);
 
             img.addEventListener("click", () => {
-                mainImageContainer.innerHTML = `<img src="${thumb}">`;
+                mainImageContainer.innerHTML = ""; // xóa ảnh cũ
+
+                const fadeImg = document.createElement("img");
+            fadeImg.src = thumb;
+
+             // Gắn lại để CSS animation chạy
+            mainImageContainer.appendChild(fadeImg);
+
             });
         });
 
